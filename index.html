@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>云上小寺 · 预览（名称待定）</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="vignette"></div>
+<div id="dim"></div>
+
+<header id="topbar" class="ui">
+  <div class="brand"><span class="name">云上小寺</span><span class="tag">预览版 · 名称待定</span></div>
+  <div class="tools">
+    <button id="btn-quality" title="切换画质">画质 · 高</button>
+    <button id="btn-sound" title="声音开关">声音 · 开</button>
+    <button id="btn-about" title="关于与致谢">关于</button>
+  </div>
+</header>
+
+<div id="minimap" class="ui"><div class="mm-title">寺院导览</div><div class="mm-sub" id="mm-sub">点击前往</div><canvas id="mm" width="300" height="300"></canvas></div>
+<div id="hint" class="ui">WASD / 方向键 行走 · 点左下角导览图可前往各地 · 拖动画面 环视 · 滚轮 远近</div>
+<div id="prompt" class="ui"></div>
+
+<nav id="actions" class="ui">
+  <button data-act="sit"><i>坐</i><span>打坐</span></button>
+  <button data-act="sutra"><i>经</i><span>听经</span></button>
+  <button data-act="meditate"><i>息</i><span>冥想</span></button>
+  <button data-act="bow"><i>礼</i><span>礼拜</span></button>
+  <button data-act="lamp"><i>灯</i><span>点灯</span></button>
+  <button data-act="fortune" class="gold"><i>签</i><span>求签 · 算命</span></button>
+</nav>
+
+<div id="joystick" class="ui"><div class="knob"></div></div>
+
+<section id="sutra-panel" class="panel ui">
+  <div class="p-title" id="sutra-title">般若波罗蜜多心经</div>
+  <div class="p-sub" id="sutra-sub">经文每日轮换 · 今日诵读</div>
+  <div class="sutra-window"><div id="sutra-lines"></div></div>
+  <div class="p-foot"><span id="sutra-credit">诵读录音：Nyarlathotep1001 · Wikimedia Commons · CC0</span><button id="btn-sutra-stop">停止</button></div>
+</section>
+
+<section id="med-panel" class="ui">
+  <div class="med-lang" role="tablist" aria-label="呼吸提示语言">
+    <button type="button" data-lang="zh" class="on">中文</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
+  <div class="breath-wrap"><div id="breath-ring"></div><div id="breath-core"></div><div id="breath-label">吸气</div></div>
+  <div class="med-info"><span id="med-remaining">05:00</span></div>
+  <div class="med-opts"><button data-min="3">3 分钟</button><button data-min="5" class="on">5 分钟</button><button data-min="10">10 分钟</button><button id="btn-med-end">结束</button></div>
+  <div class="med-tip" id="med-tip">吸气 4 秒 · 呼气 6 秒 · 让注意力回到呼吸</div>
+</section>
+
+<section id="fortune-panel" class="modal ui">
+  <div class="modal-card">
+    <button class="close" data-close>×</button>
+    <div id="fortune-body"></div>
+    <div class="f-note">出生信息只保存在本机，不会上传 · 读盘、合盘与问答为本地预览，不构成专业命理、医疗或投资建议 · 仅供娱乐与自我观照 · 会员功能为预览演示，未接入任何支付或账号</div>
+  </div>
+</section>
+
+<section id="about-panel" class="modal ui">
+  <div class="modal-card about">
+    <button class="close" data-close>×</button>
+    <h2>关于「云上小寺」（预览）</h2>
+    <p>这是一个线上静心小空间的早期预览：可以在寺院中漫步、打坐、听经、冥想、点灯，并在求签处使用每日一签、读盘、合盘与问答。左下角「寺院导览」可点击前往大殿、莲池、求签处、山门与香炉，也可点地图上的其他空地。名称为占位名，最终由主理人决定。本项目为数字化静心体验，与任何真实寺院或僧团无隶属关系。</p>
+    <h3>素材与许可</h3>
+    <ul>
+      <li>角色：本项目原创程序化 Q 版小沙弥（自定义骨骼与步行 / 待机 / 打坐 / 合十动作），大殿内有许多相同风格的小僧</li>
+      <li>殿中金身主尊与胁侍、壁画均为本项目程序化造型，仅为示意，与任何真实寺院无关</li>
+      <li>心经诵读：Nyarlathotep1001，Wikimedia Commons（CC0 1.0），由 Ogg 转为 AAC。其他轮换经文暂为默读版</li>
+      <li>环境光照 HDR：Poly Haven「Qwantani Afternoon」（CC0）；木地板贴图：Poly Haven（CC0）</li>
+      <li>经文：《般若波罗蜜多心经》玄奘译本、《佛说八大人觉经》安世高译本（皆为公有领域），按日轮换</li>
+      <li>签文：本项目原创，仅供娱乐与自我观照</li>
+      <li>读盘 / 合盘：按出生日期在本机排四柱八字（历法库 lunar-javascript，MIT），解读为预览用温和观照文案，不作吉凶断言</li>
+      <li>问答：根据已保存的盘面在本机生成回答，不联网、不调用外部模型</li>
+      <li>3D 引擎：three.js r170（MIT License）；标题字体：Noto Serif SC（SIL OFL 1.1）</li>
+      <li>建筑、树木、灯笼、水面、环境音效：本项目程序化生成。庭院灯笼与香炉可在场景中点击</li>
+      <li>冥想呼吸提示音：中文「吸气 / 呼气」与英文 Inhale / Exhale，为预览用合成语音；可在冥想面板切换</li>
+    </ul>
+    <p class="small">完整清单见压缩包内 CREDITS.md。</p>
+    <button id="btn-reset">清除本地预览数据（会员模拟 / 今日签 / 读盘与合盘）</button>
+  </div>
+</section>
+
+<div id="toast" class="ui"></div>
+
+<div id="loading">
+  <div class="ld-inner">
+    <div class="ld-title">云上小寺</div>
+    <div class="ld-sub">夜色、灯火、红枫与一盏清茶的时间</div>
+    <div class="ld-bar"><div id="ld-fill"></div></div>
+    <div id="ld-text">正在载入…</div>
+    <button id="btn-enter" disabled>入 寺</button>
+    <div class="ld-note">预览版 · 名称待定 · 建议使用电脑版 Chrome / Edge</div>
+  </div>
+</div>
+<div id="fake-cursor"></div>
+
+<audio id="sutra-audio" src="audio/heart-sutra-mandarin-cc0.m4a" preload="auto"></audio>
+<script>
+  // Opened by double-click (file://)? Load embedded asset copies so no server is needed.
+  if (location.protocol === 'file:') document.write('<script src="js/assets-embed.js"><\/script>');
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
