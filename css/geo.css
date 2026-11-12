@@ -1,0 +1,26 @@
+/* GEO / intro text on the loading screen — does not change the 3D layout */
+#loading { overflow: auto; }
+.ld-inner { max-width: 560px; padding: 28px 20px 36px; }
+.ld-desc {
+  margin: 16px auto 0;
+  font-size: 13px;
+  line-height: 1.75;
+  letter-spacing: 0.4px;
+  color: #d8cdb6;
+  text-align: left;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.ld-desc[lang="en"] { margin-top: 10px; color: #c4b89f; font-size: 12.5px; }
+.ld-links { margin: 14px 0 0; font-size: 12px; letter-spacing: 1px; }
+.ld-links a { color: var(--gold2); text-decoration: none; border-bottom: 1px solid rgba(233,196,106,0.4); }
+.ld-links a:hover { border-bottom-color: var(--gold); }
+#noscript-about {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px 20px 80px;
+  color: #f3ead6;
+  font-family: var(--serif);
+  line-height: 1.8;
+}
+#noscript-about a { color: #f4d58d; }
