@@ -22,6 +22,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -32,6 +35,12 @@ User-agent: Bytespider
 Allow: /
 
 User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://menglydia66-create.github.io/yunshang-xiaosi-preview/sitemap.xml

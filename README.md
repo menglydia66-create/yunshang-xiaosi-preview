@@ -8,6 +8,8 @@ A walkable temple in the browser. You don’t need to go anywhere. Open this pag
 
 **About / FAQ:** https://menglydia66-create.github.io/yunshang-xiaosi-preview/about.html
 
+**Product Hunt:** https://www.producthunt.com/products/yunshang-xiaosi
+
 The name 云上小寺 (Yunshang Xiaosi, “a little temple in the clouds”) is still a placeholder. This is a free public preview: no payment, no real accounts. Birth information stays in your browser and is not uploaded. The project is a digital quiet-space experience and is not affiliated with any real temple or monastic community. Characters, architecture, and copy are original.
 
 Best viewed in desktop Chrome or Edge. GitHub Pages may be slow or unreliable in some regions.

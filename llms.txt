@@ -11,6 +11,7 @@ The public name 云上小寺 (Yunshang Xiaosi, “a little temple in the clouds�
 - [Enter the temple](https://menglydia66-create.github.io/yunshang-xiaosi-preview/): the interactive temple (JavaScript required; best in desktop Chrome or Edge)
 - [About and FAQ](https://menglydia66-create.github.io/yunshang-xiaosi-preview/about.html): bilingual description and frequently asked questions
 - [Source repository](https://github.com/menglydia66-create/yunshang-xiaosi-preview)
+- [Product Hunt](https://www.producthunt.com/products/yunshang-xiaosi)
 - [Credits and licenses](https://menglydia66-create.github.io/yunshang-xiaosi-preview/CREDITS.md)
 
 ## What you can do

@@ -1,0 +1,29 @@
+# 云上小寺 / Yunshang Xiaosi
+
+> A walkable temple in the browser. You don’t need to go anywhere. Open the page, and a quiet visit can begin: walk through the temple, listen to a sutra, sit and breathe. It doesn’t promise mystical results—just a little time, some company, and a chance to come back to yourself. Fortune readings, if you try them, are for reflection and entertainment only.
+
+不必去某个固定场所。打开这个网页，就可以开始一段静心之旅：走进寺院、听经、冥想，也有人轻轻陪伴。它不保证什么神奇效果，只把一段安静的时间还给你，帮你找回自己。求签与读盘仅供娱乐与自我观照。
+
+The public name 云上小寺 (Yunshang Xiaosi, “a little temple in the clouds”) is still a placeholder. This is a public preview of a digital quiet-space experience. It is not affiliated with any real temple or monastic community. Characters, architecture, and copy are original.
+
+## Pages
+
+- [Enter the temple](https://menglydia66-create.github.io/yunshang-xiaosi-preview/): the interactive temple (JavaScript required; best in desktop Chrome or Edge)
+- [About and FAQ](https://menglydia66-create.github.io/yunshang-xiaosi-preview/about.html): bilingual description and frequently asked questions
+- [Source repository](https://github.com/menglydia66-create/yunshang-xiaosi-preview)
+- [Product Hunt](https://www.producthunt.com/products/yunshang-xiaosi)
+- [Credits and licenses](https://menglydia66-create.github.io/yunshang-xiaosi-preview/CREDITS.md)
+
+## What you can do
+
+- Walk the courtyard and hall with a third-person follow camera
+- Sit, listen to a daily sutra (the Heart Sutra has a recitation track; other texts may be read silently at a natural pace), meditate with bilingual breath cues, bow, and light lanterns
+- Use a clickable temple map to go to the main hall, lotus pond, fortune booth, gate, or incense burner
+- Try a daily fortune slip, a birth-chart reading, a compatibility reading, or a local Q&A
+
+## Important limits
+
+- Free public preview: no payment, no real accounts
+- Birth information stays in the visitor’s browser and is not uploaded to a server
+- Fortune slips, readings, and Q&A are for reflection and entertainment only; they are not professional advice and do not promise to change luck, treat illness, or guide investments or relationships
+- GitHub Pages may be slow or unreliable in some regions
